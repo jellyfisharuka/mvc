@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"mvc/initializer"
+)
 
+func init() {
+	initializer.LoadEnvariables()
+initializer.ConnectionDatabase()
+}
 func main() {
 	fmt.Println("js")
 }
