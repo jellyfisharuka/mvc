@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"mvc/controllers"
 	"mvc/initializer"
 	"os"
-
+    "mvc/routes"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
 )
@@ -25,7 +24,7 @@ func main() {
 	//configure app
 	app.Static("/", "./public")
     //routes
-	app.Get("/", controllers.POstsIndex)
+	routes.Routes(app)
     //start app
 	err := app.Listen(":" + os.Getenv("PORT"))
 if err != nil {
