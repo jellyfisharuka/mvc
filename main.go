@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"mvc/controllers"
 	"mvc/initializer"
 	"os"
-    "github.com/gofiber/template/html"
+
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/template/html/v2"
 )
 
 func init() {
@@ -25,5 +27,8 @@ func main() {
     //routes
 	app.Get("/", controllers.POstsIndex)
     //start app
-	app.Listen(":"+os.Getenv("PORT"))
+	err := app.Listen(":" + os.Getenv("PORT"))
+if err != nil {
+    fmt.Println("Error starting server:", err)
+}
 }

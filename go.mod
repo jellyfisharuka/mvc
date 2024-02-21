@@ -5,7 +5,8 @@ go 1.20
 require gorm.io/driver/mysql v1.5.4
 
 require (
-	github.com/gofiber/utils v0.0.10 // indirect
+	github.com/gofiber/template v1.8.3 // indirect
+	github.com/gofiber/utils v1.1.0 // indirect
 	github.com/gorilla/schema v1.1.0 // indirect
 )
 
@@ -16,6 +17,7 @@ require (
 	github.com/githubnemo/CompileDaemon v1.4.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/gofiber/fiber/v2 v2.52.0 // indirect
+	github.com/gofiber/template/html/v2 v2.1.1
 	github.com/google/uuid v1.5.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
