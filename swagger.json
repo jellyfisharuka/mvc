@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+      "ID": {
+        "type": "integer",
+        "format": "int64",
+        "description": "Уникальный идентификатор поста"
+      },
+      "title": {
+        "type": "string",
+        "description": "Заголовок поста"
+      },
+      "body": {
+        "type": "string",
+        "description": "Тело поста"
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Дата и время создания поста"
+      },
+      "updatedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Дата и время последнего обновления поста"
+      },
+      "deletedAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Дата и время удаления поста (если применимо)"
+      }
+    }
+  }

@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
-	"mvc/initializer"
+	"mvc/internal/initializer"
+	"mvc/internal/routes"
 	"os"
-    "mvc/routes"
+
+	"github.com/gofiber/contrib/swagger"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
 )
@@ -30,4 +32,12 @@ func main() {
 if err != nil {
     fmt.Println("Error starting server:", err)
 }
+//swagger
+cfg := swagger.Config{
+    BasePath: "/",
+    FilePath: "./docs/swagger.json",
+    Path:     "swagger",
+    Title:    "Swagger API Docs",
+}
+app.Use(swagger.New(cfg))
 }

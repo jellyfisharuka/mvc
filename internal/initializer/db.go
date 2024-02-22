@@ -1,10 +1,9 @@
 package initializer
 
 import (
-	"fmt"
-	"mvc/models"
+	"mvc/internal/helpers"
+	"mvc/internal/models"
 	"os"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -16,11 +15,11 @@ func ConnectionDatabase() {
 	dsn := os.Getenv("DB_URL")
 
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
-	if err != nil {
-		fmt.Println("failed to connect db")
-	}
+	helpers.ErrorPanic(err)
 }
 
 func SyncDB() {
 DB.AutoMigrate(&models.Post{})
+DB.AutoMigrate(&models.Author{})
 }
+
