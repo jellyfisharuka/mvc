@@ -6,7 +6,6 @@ require gorm.io/driver/mysql v1.5.4
 
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
-	github.com/arsmn/fiber-swagger/v2 v2.31.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.3 // indirect
 	github.com/go-openapi/analysis v0.21.4 // indirect
@@ -29,7 +28,6 @@ require (
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
-	github.com/swaggo/files v0.0.0-20210815190702-a29dd2bc99b2 // indirect
 	github.com/swaggo/swag v1.16.3 // indirect
 	github.com/urfave/cli/v2 v2.27.1 // indirect
 	github.com/xrash/smetrics v0.0.0-20231213231151-1d8dd44e695e // indirect
